@@ -43,5 +43,9 @@ LimitNOFILE=524288
 LimitNPROC=524288
 LimitMEMLOCK=infinity
 
+{% if vault_http_proxy  %}
+Environment="http_proxy={{ vault_http_proxy }}" "https_proxy={{ vault_https_proxy }}" "no_proxy={{ vault_no_proxy }}"
+{% endif %}
+
 [Install]
 WantedBy=multi-user.target

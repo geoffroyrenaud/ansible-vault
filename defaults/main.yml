@@ -127,6 +127,11 @@ vault_dynamodb_access_key: "{{ lookup('env','AWS_ACCESS_KEY_ID') | default('', f
 vault_dynamodb_secret_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') | default('', false) }}"
 vault_dynamodb_session_token: "{{ lookup('env', 'AWS_SESSION_TOKEN') | default('', false) }}"
 
+# proxy environment
+vault_http_proxy: ""
+vault_https_proxy: ""
+vault_no_proxy: ""
+
 # ---------------------------------------------------------------------------
 # Initialization and startup script templates
 # ---------------------------------------------------------------------------
